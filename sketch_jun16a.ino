@@ -18,18 +18,13 @@ void setup() {
   pinMode(amarelo, OUTPUT);
   pinMode(verde, OUTPUT);
   pinMode(azul, OUTPUT);
-
   pinMode(branco, OUTPUT);
   pinMode(vermelho2, OUTPUT);
   pinMode(amarelo2, OUTPUT);
   pinMode(verde2, OUTPUT);
   pinMode(botao, INPUT);
 
-
-  // iniciamos com o ultimo ligado ...
   digitalWrite(verde2, HIGH);
-
-  // .. e os demais desligados
   digitalWrite(amarelo2, LOW);  
   digitalWrite(vermelho2, LOW);
   digitalWrite(vermelho, LOW);
@@ -72,7 +67,7 @@ void loop()
 }
 
 void semaforo() {
-    // ligamos o AMARELO2; //ida
+    // 1st
   digitalWrite(amarelo2, HIGH);
   digitalWrite(vermelho2, LOW);
   digitalWrite(verde2, LOW);
@@ -193,7 +188,7 @@ void semaforo2() {
   digitalWrite(amarelo, LOW);
   delay(50);
 
-  //ligar AMARELO (volta):
+  //ligar AMARELO (Back):
   digitalWrite(amarelo, HIGH);
   digitalWrite(vermelho, LOW);
    delay(50);
